@@ -150,7 +150,9 @@ public class MyLinearMap<K, V> implements Map<K, V> {
         // TODO: fill this in.
         Entry entry = findEntry(key);
         if (entry != null) {
+        	V val = entry.getValue();
         	entries.remove(entry);
+        	return val;
         }
         return null;
 	}
